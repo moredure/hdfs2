@@ -4,7 +4,7 @@ import (
 	"errors"
 	"io"
 
-	hadoop "github.com/colinmarc/hdfs/v2/internal/protocol/hadoop_common"
+	hadoop "github.com/moredure/hdfs2/internal/protocol/hadoop_common"
 	"github.com/golang/protobuf/proto"
 )
 

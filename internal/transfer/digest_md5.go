@@ -10,7 +10,7 @@ import (
 	"net"
 	"strings"
 
-	"github.com/colinmarc/hdfs/v2/internal/sasl"
+	"github.com/moredure/hdfs2/internal/sasl"
 )
 
 const (

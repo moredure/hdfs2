@@ -7,7 +7,7 @@ import (
 	"fmt"
 	"io"
 
-	hdfs "github.com/colinmarc/hdfs/v2/internal/protocol/hadoop_hdfs"
+	hdfs "github.com/moredure/hdfs2/internal/protocol/hadoop_hdfs"
 	"github.com/golang/protobuf/proto"
 )
 

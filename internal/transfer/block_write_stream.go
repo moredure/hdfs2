@@ -12,7 +12,7 @@ import (
 	"sync"
 	"time"
 
-	hdfs "github.com/colinmarc/hdfs/v2/internal/protocol/hadoop_hdfs"
+	hdfs "github.com/moredure/hdfs2/internal/protocol/hadoop_hdfs"
 	protoV2 "google.golang.org/protobuf/proto"
 	"github.com/golang/protobuf/proto"
 )
