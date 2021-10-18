@@ -1,4 +1,4 @@
-package hdfs
+package hdfs2
 
 import (
 	"testing"

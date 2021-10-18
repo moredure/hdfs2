@@ -1,4 +1,4 @@
-package hdfs
+package hdfs2
 
 import (
 	"hash/crc32"

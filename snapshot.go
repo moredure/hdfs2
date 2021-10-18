@@ -1,4 +1,4 @@
-package hdfs
+package hdfs2
 
 import (
 	hdfs "github.com/moredure/hdfs2/internal/protocol/hadoop_hdfs"
