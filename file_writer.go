@@ -48,6 +48,13 @@ func (c *Client) Create(name string) (*FileWriter, error) {
 	return c.CreateFile(name, replication, blockSize, 0644)
 }
 
+func (c *Client) CreateAll(name string) (*FileWriter, error) {
+	if err := c.MkdirAll(path.Dir(name), 0644); err != nil {
+		return nil, err
+	}
+	return c.Create(name)
+}
+
 // CreateFile opens a new file in HDFS with the given replication, block size,
 // and permissions, and returns an io.WriteCloser for writing to it. Because of
 // the way that HDFS writes are buffered and acknowledged asynchronously, it is
@@ -75,6 +82,13 @@ func (c *Client) CreateFile(name string, replication int, blockSize int64, perm 
 		replication: replication,
 		blockSize:   blockSize,
 	}, nil
+}
+
+func (c *Client) CreateFileAll(name string, replication int, blockSize int64, perm os.FileMode) (*FileWriter, error) {
+	if err := c.MkdirAll(path.Dir(name), perm); err != nil {
+		return nil, err
+	}
+	return c.CreateFile(name, replication, blockSize, perm)
 }
 
 // Append opens an existing file in HDFS and returns an io.WriteCloser for
