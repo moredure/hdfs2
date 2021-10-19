@@ -4,6 +4,7 @@ import (
 	"io"
 	"os"
 	"time"
+	"path"
 
 	hdfs "github.com/moredure/hdfs2/internal/protocol/hadoop_hdfs"
 	"github.com/moredure/hdfs2/internal/transfer"
